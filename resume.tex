@@ -1,0 +1,467 @@
+\documentclass{report}
+\usepackage{calc}
+\usepackage[margin=1cm]{geometry}
+\usepackage{textcomp}
+\usepackage{soul}
+\usepackage{array}
+\usepackage{rotating}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage[
+            colorlinks=true,
+            urlcolor=blue,
+            linkbordercolor=blue,
+            pdftex,
+            pdfauthor={Andrew Gottemoller},
+            pdftitle={Resume - Andrew Gottemoller},
+            pdfsubject={Resume},
+            pdfkeywords={resume, software engineer, chicago},
+            pdfcreator={pdflatex}
+           ]{hyperref}
+
+
+\pagenumbering{gobble}
+
+\definecolor{titlecolor}{rgb}{0, 0.2, 0.6}
+\definecolor{catcolor}{rgb}{0.5, 0, 0}
+\definecolor{bordercolor}{rgb}{0.5, 0.5, 0.5}
+\definecolor{emphcolor}{rgb}{0, 0.2, 0.6}
+
+\renewcommand{\tabcolsep}{0.2cm}
+
+\setitemize{noitemsep, topsep=0.2em}
+
+\sodef\titleso{}{0.9em}{2.5em}{0.2cm}
+
+\newcommand{\titletext}[1]      {
+                                 \fontencoding{T1}
+                                 \fontfamily{cmr}
+                                 \fontseries{m}
+                                 \fontsize{17}{17}
+                                 \selectfont
+                                 \textcolor{titlecolor}{\textsc{\titleso{#1}}}
+                                }
+\newcommand{\horzcattext}[1]    {
+                                 \fontencoding{T1}
+                                 \fontfamily{cmr}
+                                 \fontseries{m}
+                                 \fontsize{8}{8}
+                                 \selectfont
+                                 \textcolor{catcolor}{\uppercase{#1}}
+                                }
+\newcommand{\vertcattext}[1]    {
+                                 \fontencoding{T1}
+                                 \fontfamily{cmr}
+                                 \fontseries{m}
+                                 \fontsize{6}{6}
+                                 \selectfont
+                                 \multirow{1}{*}[-1em]{
+                                                       \begin{sideways}
+                                                           \textcolor{catcolor}{\uppercase{#1}}
+                                                       \end{sideways}
+                                                      }
+                                }
+\newcommand{\horzsectext}[1]    {
+                                 \fontencoding{T1}
+                                 \fontfamily{cmr}
+                                 \fontseries{m}
+                                 \fontsize{9}{9}
+                                 \selectfont
+                                 \uppercase{#1}
+                                }
+\newcommand{\contenttext}       {
+                                 \fontencoding{T1}
+                                 \fontfamily{cmss}
+                                 \fontseries{m}
+                                 \fontsize{9}{9}
+                                 \selectfont
+                                }
+\newcommand{\listtext}          {
+                                 \fontencoding{T1}
+                                 \fontfamily{cmss}
+                                 \fontseries{m}
+                                 \fontsize{8}{8}
+                                 \selectfont
+                                }
+\newcommand{\timelinedesc}[1]   {\contenttext\textcolor{emphcolor}{#1}}
+\newcommand{\timelinedescloc}[2]{\contenttext\textcolor{emphcolor}{#1}, #2}
+\newcommand{\timelinedates}[2]  {\contenttext\emph{#1 - #2}}
+\newcommand{\timelineapprox}[1] {\contenttext\emph{#1}}
+\newcommand{\timelinesummary}[1]{
+                                 \multicolumn{2}{l}{
+                                                    \parbox{0.9\textwidth-\tabcolsep-\tabcolsep}{
+                                                                                                 \contenttext
+                                                                                                 \begin{itemize}
+                                                                                                     #1
+                                                                                                 \end{itemize}
+                                                                                                }
+                                                   }
+                                }
+\newcommand{\summary}[1]        {
+                                 \parbox{0.95\textwidth-\tabcolsep-\tabcolsep}{
+                                                                              \contenttext
+                                                                              \begin{itemize}
+                                                                                  #1
+                                                                              \end{itemize}
+                                                                             }
+                                }
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\newcommand{\vborder}   {\color{bordercolor}\vline}
+\newcommand{\hborder}   {\arrayrulecolor{bordercolor}\hline}
+\newcommand{\cborder}[2]{\arrayrulecolor{bordercolor}\cline{#1-#2}}
+
+\newcommand{\tablegap}{\vspace{0.5em}}
+
+
+\begin{document}
+
+
+\begin{table}
+    \begin{tabular}{
+                    L{0.25\textwidth-\tabcolsep-\tabcolsep} !{\vborder}
+                    L{0.25\textwidth-\tabcolsep-\tabcolsep} !{\vborder}
+                    L{0.25\textwidth-\tabcolsep-\tabcolsep} !{\vborder}
+                    L{0.25\textwidth-\tabcolsep-\tabcolsep}
+                   }
+        \multicolumn{4}{c}{\titletext{Andrew Gottemoller}} \\
+
+        \hborder
+
+        \horzcattext{Address} &
+        \horzcattext{E-Mail} &
+        \horzcattext{Website} &
+        \horzcattext{Phone} \\
+
+        \contenttext - &
+        \href{mailto:agottem@gmail.com}{agottem@gmail.com} &
+        \href{http://www.agottem.com}{www.agottem.com} &
+        \contenttext - \\
+
+        \hborder
+    \end{tabular}
+
+    \tablegap
+
+    \begin{tabular}{
+                    L{0.05\textwidth-\tabcolsep-\tabcolsep}
+                    L{0.48\textwidth-\tabcolsep-\tabcolsep}
+                    R{0.47\textwidth-\tabcolsep-\tabcolsep}
+                   }
+        \multicolumn{3}{l}{\horzsectext{Work Experience}} \\
+
+        \hborder
+
+        &
+        \timelinedescloc{Citadel}{Chicago, IL} &
+        \timelinedates{January 2014}{Present} \\
+
+        \cborder{2}{3}
+
+        &
+        \timelinesummary{
+                         \item Software Engineer for the FX Market Making team
+                         \item Developed software to connect and process market data feeds for
+                               various ECNs and exchange
+                         \item Engineered a FIX protocol which enabled users to connect and trade
+                               FX products directly with Citadel
+                         \item Helped design various trading strategies for FX market making
+                         \item Optimized critical execution paths to improve latencies where
+                               microseconds were significant
+                         \item Built a website for visualizing real-time data related to the
+                               FX strategies
+                               \begin{itemize}
+                                   \item Backend server was C++ and communicated with the HTML5
+                                         and Javascript frontend using websockets
+                               \end{itemize}
+                        } \\
+
+        &
+        \timelinedescloc{Trading Technologies}{Chicago, IL} &
+        \timelinedates{September 2008}{October 2014} \\
+
+        \cborder{2}{3}
+
+        &
+        \timelinesummary{
+                         \item Principal Software Engineer and team lead for algorithmic trading
+                               server products
+                         \item Architected and developed a low latency C API for trading against
+                               various exchanges, including CME and ICE
+                               \begin{itemize}
+                                   \item The API was designed to allow multiple untrusted users
+                                         to shared a single co-located Linux server
+                                   \item To enforce user isolation while providing low latency
+                                         access to orders and prices, kernel drivers were developed
+                                         which were able to expose efficient and trusted IPC
+                                   \item Invented a novel solution for communicating price updates
+                                         to thousands of users by implementing a file system driver
+                                         which communicated these updates via standard file i/o
+                                         calls
+                               \end{itemize}
+                         \item Built a ``visual programming environment'' which enabled
+                               non-programmers to develop trading algorithms
+                               \begin{itemize}
+                                   \item The front-end GUI was developed as a web application with
+                                         JavaScript, HTML, and websockets while hosted on an Apache
+                                         web server
+                                   \item GUI enabled the trader to build trading logic in a fashion
+                                         similar to the ``Lego Mindstorms'' programming
+                                         environment
+                                   \item Implemented the algorithms and logic responsible for
+                                         converting the visual representation of the logic to a
+                                         form that would execute on a shared co-located Linux server
+                               \end{itemize}
+                         \item Participated in the design and development of new trading algorithms,
+                               some of which were patented
+                         \item Profiled and redesigned key algorithms to improve concurrency and
+                               performance on multiprocessor systems
+                         \item Responsible for analyzing and debugging difficult core dumps from
+                               servers executing in the field
+                         \item Designed and implemented a build system using GNU Make for all server
+                               and client applications which allowed for more maintainable and
+                               configurable compilations
+                        } \\
+
+        &
+        \timelinedescloc{Microsoft}{Seattle, WA} &
+        \timelinedates{August 2007}{September 2008} \\
+
+        \cborder{2}{3}
+
+        &
+        \timelinesummary{
+                         \item Software Engineer for the Windows 7 Core OS Team
+                         \item Participated in the design, development, and debugging phases for
+                               Windows 7
+                               \begin{itemize}
+                                     \item Focused on upgrade and migration tools for OS deployment
+                               \end{itemize}
+                         \item Analyzed user experience studies on migration tools and applications
+                               to improve usability
+                         \item Implemented the GUI for Windows Easy Transfer wizard which is
+                               available on every Windows 7 PC
+                        } \\
+
+        &
+        \timelinedescloc{Motorola}{Urbana, IL} &
+        \timelinedates{May 2004}{June 2007} \\
+
+        \cborder{2}{3}
+
+        &
+        \timelinesummary{
+                         \item Software Engineer on the Linux OS team for mobile devices
+                         \item Implemented Linux device driver which allowed userspace applications
+                               to control GPIO pins on the embedded device
+                         \item Implemented Linux device driver which monitored the phone's keypad
+                               and communicated key presses to userspace
+                         \item Implemented Linux network driver which allowed userspace applications
+                               to communicate with processes running on the baseband processor
+                         \item Enhanced and debugged areas of the Linux kernel running on embedded
+                               devices
+                        } \\
+
+%        &
+%        \timelinedescloc{General Motors}{La Grange, IL} &
+%        \timelineapprox{Summer 2002} \\
+%
+%        \cborder{2}{3}
+%
+%        &
+%        \timelinesummary{
+%                         \item Designed and developer ``WinOpus'' to meet the requirements of EMD
+%                               engineers
+%                         \item ``WinOpus'' interfaced with an array of engine sensors to measure,
+%                               analyze, and record data
+%                        } \\
+    \end{tabular}
+
+    \tablegap
+
+    \begin{tabular}{
+                    L{0.05\textwidth-\tabcolsep-\tabcolsep}
+                    L{0.48\textwidth-\tabcolsep-\tabcolsep}
+                    R{0.47\textwidth-\tabcolsep-\tabcolsep}
+                   }
+        \multicolumn{3}{l}{\horzsectext{Ventures}} \\
+
+        \hborder
+
+        &
+        \timelinedesc{Drone Robotics} &
+        \timelineapprox{Present} \\
+
+        \cborder{2}{3}
+
+        &
+        \timelinesummary{
+                         \item Architected hardware and software for a UAV drone
+                         \item Designed protocol for unreliable wireless communication using Digi
+                               XBee transmitters
+                         \item Modified Robovero firmware to support higher polling rate of the IMU
+                         \item Wrote all the software required for interfacing with hardware,
+                               including servo and motor control, configuring Robovero peripherals
+                               over I2C, reading video frames from a camera, and interfacing with
+                               the transmitter hardware
+                         \item Some of the software has been open-sourced and is available at
+                               \href{http://www.agottem.com/robovero\_sensors}{http://www.agottem.com/robovero\_sensors}
+                        } \\
+
+        &
+        \timelinedesc{Trigger-Script Programming Language} &
+        \timelineapprox{2012} \\
+
+        \cborder{2}{3}
+
+        &
+        \timelinesummary{
+                         \item Designed to enable novice programmers to implement algorithms which
+                               are driven by asynchronous events
+                         \item Key features include static type inference and asynchronous event
+                               handlers which are executed when specified triggers are seen
+                         \item Language intended to be used by high frequency traders
+                         \item Implemented a debugger, compiler, and graphical IDE for the language
+                         \item The language is open-source and documented at
+                               \href{http://www.agottem.com/trigger\_script}{http://www.agottem.com/trigger\_script}
+                        } \\
+    \end{tabular}
+
+    \tablegap
+
+    \begin{tabular}{
+                    L{0.05\textwidth-\tabcolsep-\tabcolsep}
+                    L{0.48\textwidth-\tabcolsep-\tabcolsep}
+                    R{0.47\textwidth-\tabcolsep-\tabcolsep}
+                   }
+        \multicolumn{3}{l}{\horzsectext{Education}} \\
+
+        \hborder
+
+        &
+        \timelinedesc{University of Illinois at Urbana-Champaign} &
+        \timelinedates{August 2003}{August 2007} \\
+
+        \cborder{2}{3}
+
+        &
+        \timelinesummary{
+                         \item B.S. in Computer Science through the College of Engineering
+                         \item Senior thesis in real-time complex physics simulations
+                        } \\
+    \end{tabular}
+
+%    \tablegap
+%
+%    \begin{tabular}{
+%                    L{0.05\textwidth-\tabcolsep-\tabcolsep}
+%                    L{0.95\textwidth-\tabcolsep-\tabcolsep}
+%                   }
+%        \multicolumn{2}{l}{\horzsectext{Honors and Activities}} \\
+%
+%        \hborder
+%
+%        &
+%        \summary{
+%                 \item Computer Science Technology Award
+%                 \item Eagle Scout in the Boy Scouts of America
+%                 \item Volunteer at the Lincoln Park Zoo (2014 - Present)
+%                }
+%    \end{tabular}
+
+\end{table}
+
+\clearpage
+
+\begin{table}[ht!]
+    \begin{tabular}{
+                    L{0.03\textwidth-\tabcolsep-\tabcolsep} !{\vborder}
+                    L{0.56\textwidth-\tabcolsep-\tabcolsep}
+                    L{0.03\textwidth-\tabcolsep-\tabcolsep} !{\vborder}
+                    L{0.17\textwidth-\tabcolsep-\tabcolsep}
+                    L{0.03\textwidth-\tabcolsep-\tabcolsep} !{\vborder}
+                    L{0.17\textwidth-\tabcolsep-\tabcolsep}
+                   }
+        \multicolumn{6}{l}{\horzsectext{Technical Skillset}} \\
+
+        \hborder
+
+        \vertcattext{Programming Experience} &
+        \listtext
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item POSIX
+                \item Linux development
+                      \begin{itemize}
+                          \item Device drivers, Kernel modification, FUSE, GTK
+                      \end{itemize}
+                \item Embedded development
+                \item Profiling and debugging
+                \item Windows development
+                      \begin{itemize}
+                          \item WinAPI, MFC, COM, .NET
+                      \end{itemize}
+                \item Computer graphics
+                      \begin{itemize}
+                          \item OpenGL, DirectX
+                      \end{itemize}
+                \item Language design and grammar definition
+                      \begin{itemize}
+                          \item Flex, Bison
+                      \end{itemize}
+                \item Network programming
+                      \begin{itemize}
+                          \item Sockets, websockets, 29West, ZeroMQ
+                      \end{itemize}
+                \item Web development
+                      \begin{itemize}
+                          \item JQuery, CanvasJS, Slickgrid
+                      \end{itemize}
+                \item Build environment setup
+                \item Software optimization
+            \end{itemize}
+        \end{multicols} &
+        \vertcattext{Programming Languages} &
+        \listtext
+        \begin{itemize}
+            \item C
+            \item C++
+            \item C\#
+            \item Assembly
+                  \begin{itemize}
+                      \item x86
+                      \item ARM
+                      \item MIPS
+                      \item PIC Micro
+                  \end{itemize}
+            \item JavaScript
+            \item Python
+            \item Scala
+            \item OCaML
+            \item LaTeX
+        \end{itemize} &
+        \vertcattext{Tools} &
+        \listtext
+        \begin{itemize}
+            \item ClearCase
+            \item Git
+            \item Apache
+            \item Clang
+            \item LLVM
+            \item GNU Compiler Collection
+            \item GNU Debugger
+            \item GNU Make
+            \item Valgrind
+            \item Microsoft Visual Studio
+            \item WinDbg
+        \end{itemize} \\
+    \end{tabular}
+\end{table}
+
+
+\end{document}
