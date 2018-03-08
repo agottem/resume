@@ -158,19 +158,54 @@
         \hborder
 
         &
-        \timelinedescloc{Citadel}{Chicago, IL} &
-        \timelinedates{January 2014}{Present} \\
+        \timelinedescloc{Citadel Securities}{Chicago, IL} &
+        \timelinedates{January 2015}{Present} \\
 
         \cborder{2}{3}
 
         &
         \timelinesummary{
-                         \item Software Engineer for the FX Market Making team
-                         \item Developed software to connect and process market data feeds for
-                               various ECNs and exchange
+                         \item Helped build Citadel's FX Market Making business from the ground up
+                               as a software engineer
+                         \item Manager and mentor for a small group of junior engineers
+                         \item Participated in the design and development of many different trading
+                               strategies, including: active, passive, and hedging strategies
+                         \item Performed historical research to identify strategy enhancements
+                               \begin{itemize}
+                                    \item Historical datasets were terabytes in size and spanned
+                                          many years
+                                    \item Custom software was written to execute historical tests
+                                          in a distributed fashion across a cluster of CPUs
+                                \end{itemize}
+                         \item Integrated trading strategies with ultra low-latency microwave
+                               infrastructure including McKay and GoWest
+                               \begin{itemize}
+                                    \item Required utilizing raw packet sockets to encode ethernet
+                                          frames conforming to the SPS protocol
+                                    \item Designed data structures capable of fitting a significant
+                                          amount of trading data into 8 byte packets
+                                    \item Designed algorithms capable of handling lossy
+                                          communication
+                               \end{itemize}
+                         \item Architected and implemented an ultra low-latency protocol which
+                               enabled independent strategies distributed worldwide to communicate
+                               trade specific information
+                         \item Utilized the Solarflare OpenOnload API to optimize various network
+                               operations within the software stack
+                         \item Integrated with many ECN and Exchange protocols to provide access
+                               to both market data and order entry
+                               \begin{itemize}
+                                    \item Protocols included FIX as well as binary protocols ITCH
+                                          and OUCH
+                               \end{itemize}
+                         \item Performed certification testing against various exchanges FX required
+                               connectivity to
+                         \item Administered certification testing for clients looking to connect
+                               and trade with Citadel software
+                         \item Helped support production operations by being on-call and helping
+                               diagnose, debug, and fix an incredibly wide range of issues
                          \item Engineered a FIX protocol which enabled users to connect and trade
                                FX products directly with Citadel
-                         \item Helped design various trading strategies for FX market making
                          \item Optimized critical execution paths to improve latencies where
                                microseconds were significant
                          \item Built a website for visualizing real-time data related to the
@@ -267,23 +302,25 @@
                                devices
                         } \\
 
-%        &
-%        \timelinedescloc{General Motors}{La Grange, IL} &
-%        \timelineapprox{Summer 2002} \\
-%
-%        \cborder{2}{3}
-%
-%        &
-%        \timelinesummary{
-%                         \item Designed and developer ``WinOpus'' to meet the requirements of EMD
-%                               engineers
-%                         \item ``WinOpus'' interfaced with an array of engine sensors to measure,
-%                               analyze, and record data
-%                        } \\
+        &
+        \timelinedescloc{General Motors}{La Grange, IL} &
+        \timelineapprox{Summer 2002} \\
+
+        \cborder{2}{3}
+
+        &
+        \timelinesummary{
+                         \item Designed and developed ``WinOpus'' to meet the requirements of EMD
+                               engineers
+                         \item ``WinOpus'' interfaced with an array of engine sensors to measure,
+                               analyze, and record data
+                        } \\
     \end{tabular}
+\end{table}
 
-    \tablegap
+\clearpage
 
+\begin{table}[ht!]
     \begin{tabular}{
                     L{0.05\textwidth-\tabcolsep-\tabcolsep}
                     L{0.48\textwidth-\tabcolsep-\tabcolsep}
@@ -353,6 +390,8 @@
         \timelinesummary{
                          \item B.S. in Computer Science through the College of Engineering
                          \item Senior thesis in real-time complex physics simulations
+                         \item Participated in a co-op at Motorola from end of freshman
+                               year through end of senior year
                         } \\
     \end{tabular}
 
@@ -374,28 +413,60 @@
 %                }
 %    \end{tabular}
 
-\end{table}
-
-\clearpage
-
-\begin{table}[ht!]
     \begin{tabular}{
                     L{0.03\textwidth-\tabcolsep-\tabcolsep} !{\vborder}
+                    L{0.17\textwidth-\tabcolsep-\tabcolsep}
+                    L{0.03\textwidth-\tabcolsep-\tabcolsep} !{\vborder}
+                    L{0.17\textwidth-\tabcolsep-\tabcolsep}
+                    L{0.03\textwidth-\tabcolsep-\tabcolsep} !{\vborder}
                     L{0.56\textwidth-\tabcolsep-\tabcolsep}
-                    L{0.03\textwidth-\tabcolsep-\tabcolsep} !{\vborder}
-                    L{0.17\textwidth-\tabcolsep-\tabcolsep}
-                    L{0.03\textwidth-\tabcolsep-\tabcolsep} !{\vborder}
-                    L{0.17\textwidth-\tabcolsep-\tabcolsep}
                    }
         \multicolumn{6}{l}{\horzsectext{Technical Skillset}} \\
 
         \hborder
 
+        \vertcattext{Programming Languages} &
+        \listtext
+        \begin{itemize}
+            \item C
+            \item C++
+            \item C\#
+            \item R
+            \item Assembly
+                  \begin{itemize}
+                      \item x86
+                      \item ARM
+                      \item MIPS
+                      \item PIC Micro
+                  \end{itemize}
+            \item JavaScript
+            \item Python
+            \item Scala
+            \item OCaML
+            \item LaTeX
+        \end{itemize} &
+        \vertcattext{Tools} &
+        \listtext
+        \begin{itemize}
+            \item ClearCase
+            \item Git
+            \item Apache
+            \item Clang
+            \item LLVM
+            \item GNU Compiler Collection
+            \item GNU Debugger
+            \item GNU Make
+            \item Valgrind
+            \item Microsoft Visual Studio
+            \item WinDbg
+            \item Wireshark
+        \end{itemize} &
         \vertcattext{Programming Experience} &
         \listtext
         \begin{multicols}{2}
             \begin{itemize}
                 \item POSIX
+                \item Solarflare OpenOnload
                 \item Linux development
                       \begin{itemize}
                           \item Device drivers, Kernel modification, FUSE, GTK
@@ -425,41 +496,7 @@
                 \item Build environment setup
                 \item Software optimization
             \end{itemize}
-        \end{multicols} &
-        \vertcattext{Programming Languages} &
-        \listtext
-        \begin{itemize}
-            \item C
-            \item C++
-            \item C\#
-            \item Assembly
-                  \begin{itemize}
-                      \item x86
-                      \item ARM
-                      \item MIPS
-                      \item PIC Micro
-                  \end{itemize}
-            \item JavaScript
-            \item Python
-            \item Scala
-            \item OCaML
-            \item LaTeX
-        \end{itemize} &
-        \vertcattext{Tools} &
-        \listtext
-        \begin{itemize}
-            \item ClearCase
-            \item Git
-            \item Apache
-            \item Clang
-            \item LLVM
-            \item GNU Compiler Collection
-            \item GNU Debugger
-            \item GNU Make
-            \item Valgrind
-            \item Microsoft Visual Studio
-            \item WinDbg
-        \end{itemize} \\
+        \end{multicols} \\
     \end{tabular}
 \end{table}
 
