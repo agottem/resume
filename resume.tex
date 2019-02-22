@@ -10,6 +10,7 @@
 \usepackage{multicol}
 \usepackage{color}
 \usepackage{colortbl}
+\usepackage{xcolor}
 \usepackage[
             colorlinks=true,
             urlcolor=blue,
@@ -86,6 +87,7 @@
                                  \fontsize{8}{8}
                                  \selectfont
                                 }
+\newcommand{\hltext}[1]         {\textcolor{emphcolor}{#1}}
 \newcommand{\timelinedesc}[1]   {\contenttext\textcolor{emphcolor}{#1}}
 \newcommand{\timelinedescloc}[2]{\contenttext\textcolor{emphcolor}{#1}, #2}
 \newcommand{\timelinedates}[2]  {\contenttext\emph{#1 - #2}}
@@ -139,7 +141,7 @@
         \horzcattext{Phone} \\
 
         \contenttext - &
-        \href{mailto:agottem@gmail.com}{agottem@gmail.com} &
+        \href{mailto:andrew-pub@agottem.com}{andrew-pub@agottem.com} &
         \href{http://www.agottem.com}{www.agottem.com} &
         \contenttext - \\
 
@@ -165,56 +167,87 @@
 
         &
         \timelinesummary{
-                         \item Helped build Citadel's FX Market Making business from the ground up
-                               as a software engineer
-                         \item Manager and mentor for a small group of junior engineers
-                         \item Participated in the design and development of many different trading
-                               strategies, including: active, passive, and hedging strategies
+                         \item Software Engineer and Quantitative Analyst on the FX Market Making
+                               team as well as manager to junior engineers
+                         \item Worked with a small team of engineers to build Citadel's FX Market
+                               Making business from the ground up utilizing primarily C++ for
+                               production software and both C++ and R for historical research
+                         \item Participated in the development of many different trading strategies,
+                               including active, passive, and hedging strategies
+                               \begin{itemize}
+                                   \item Traded various FX asset classes, including: spot, futures,
+                                         forwards, and swaps
+                                   \item Implemented passive strategies for both firm and last look
+                                         venues
+                                   \item Developed simulators to measure historical performance and
+                                         aid in parameter fitting and selection
+                                   \item Strategies operated 24 x 5 and executed across multiple
+                                         data-centers worldwide
+                                   \item All strategies were built to be fully automated with well
+                                         defined failure modes to meet uptime requirements and
+                                         minimize devops support calls
+                               \end{itemize}
+                         \item Collaborated with a sales team and other engineers to build out
+                               Citadel's disclosed client business
+                               \begin{itemize}
+                                   \item Worked with QR to develop risk warehousing strategies and
+                                         perform client toxicity modeling
+                                   \item Engineered software capable of managing and serving
+                                         hundreds of clients worldwide
+                                   \item Designed a FIX protocol for clients to integrate with as
+                                         well as an on-boarding process
+                               \end{itemize}
                          \item Performed historical research to identify strategy enhancements
                                \begin{itemize}
-                                    \item Historical datasets were terabytes in size and spanned
-                                          many years
-                                    \item Custom software was written to execute historical tests
-                                          in a distributed fashion across a cluster of CPUs
-                                \end{itemize}
+                                   \item Built a data normalization pipeline which consumed
+                                         strategy logs and output a graph of trading events and
+                                         triggers
+                                   \item Developed a reporting pipeline which consumed the
+                                         normalized data to perform PnL attribution, compute mark
+                                         out horizons, quantify hedge miss times, measure execution
+                                         inference accuracy, and report many other metrics
+                                   \item Historical datasets were terabytes in size and spanned
+                                         many years
+                                   \item Custom software was written to execute historical analysis
+                                         in a distributed fashion across a cluster of CPUs
+                               \end{itemize}
                          \item Integrated trading strategies with ultra low-latency microwave
                                infrastructure including McKay and GoWest
                                \begin{itemize}
-                                    \item Required utilizing raw packet sockets to encode ethernet
+                                    \item Invented a protocol suitable for the limitations and
+                                          reliability profile of microwave links which enabled
+                                          independent strategies distributed worldwide to
+                                          communicate trade specific information
+                                    \item Required utilizing raw packet sockets to encode Ethernet
                                           frames conforming to the SPS protocol
                                     \item Designed data structures capable of fitting a significant
                                           amount of trading data into 8 byte packets
                                     \item Designed algorithms capable of handling lossy
                                           communication
                                \end{itemize}
-                         \item Architected and implemented an ultra low-latency protocol which
-                               enabled independent strategies distributed worldwide to communicate
-                               trade specific information
+                         \item Improved upon techniques to infer executions from various venues such
+                               as EBS, Fastmatch, and Currenex
+                         \item Integrated with many ECN and Exchange protocols to provide access to
+                               both market data and order entry
+                               \begin{itemize}
+                                 \item Protocols included EBS Ultra, Reuters SBE, Currenex taker and
+                                       maker APIs, as well as many other FIX and binary ITCH/OUCH
+                                       protocols
+                               \end{itemize}
                          \item Utilized the Solarflare OpenOnload API to optimize various network
                                operations within the software stack
-                         \item Integrated with many ECN and Exchange protocols to provide access
-                               to both market data and order entry
-                               \begin{itemize}
-                                    \item Protocols included FIX as well as binary protocols ITCH
-                                          and OUCH
-                               \end{itemize}
+                         \item Developed back office infrastructure to support new FX asset classes
                          \item Performed certification testing against various exchanges FX required
                                connectivity to
                          \item Administered certification testing for clients looking to connect
                                and trade with Citadel software
                          \item Helped support production operations by being on-call and helping
                                diagnose, debug, and fix an incredibly wide range of issues
-                         \item Engineered a FIX protocol which enabled users to connect and trade
-                               FX products directly with Citadel
                          \item Optimized critical execution paths to improve latencies where
                                microseconds were significant
                          \item Built a website for visualizing real-time data related to the
-                               FX strategies
-                               \begin{itemize}
-                                   \item Backend server was C++ and communicated with the HTML5
-                                         and Javascript frontend using websockets
-                               \end{itemize}
-                        } \\
+                               FX strategies using C++ websockets, HTML5, and Javascript
+                       } \\
 
         &
         \timelinedescloc{Trading Technologies}{Chicago, IL} &
@@ -282,6 +315,20 @@
                          \item Implemented the GUI for Windows Easy Transfer wizard which is
                                available on every Windows 7 PC
                         } \\
+    \end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht!]
+    \begin{tabular}{
+                    L{0.05\textwidth-\tabcolsep-\tabcolsep}
+                    L{0.48\textwidth-\tabcolsep-\tabcolsep}
+                    R{0.47\textwidth-\tabcolsep-\tabcolsep}
+                   }
+        \multicolumn{3}{l}{\horzsectext{Work Experience (cont.)}} \\
+
+        \hborder
 
         &
         \timelinedescloc{Motorola}{Urbana, IL} &
@@ -316,11 +363,9 @@
                                analyze, and record data
                         } \\
     \end{tabular}
-\end{table}
 
-\clearpage
+    \tablegap
 
-\begin{table}[ht!]
     \begin{tabular}{
                     L{0.05\textwidth-\tabcolsep-\tabcolsep}
                     L{0.48\textwidth-\tabcolsep-\tabcolsep}
@@ -373,6 +418,23 @@
 
     \begin{tabular}{
                     L{0.05\textwidth-\tabcolsep-\tabcolsep}
+                    L{0.95\textwidth-\tabcolsep-\tabcolsep}
+                   }
+        \multicolumn{2}{l}{\horzsectext{Patents}} \\
+
+        \hborder
+
+        &
+        \summary{
+                 \item \hltext{US Patent 10,068,290} - System and method for determining a stable
+                       quoting quantity for use in a trading strategy
+                }
+    \end{tabular}
+
+    \tablegap
+
+    \begin{tabular}{
+                    L{0.05\textwidth-\tabcolsep-\tabcolsep}
                     L{0.48\textwidth-\tabcolsep-\tabcolsep}
                     R{0.47\textwidth-\tabcolsep-\tabcolsep}
                    }
@@ -389,14 +451,15 @@
         &
         \timelinesummary{
                          \item B.S. in Computer Science through the College of Engineering
-                         \item Senior thesis in real-time complex physics simulations
+                         \item Senior thesis in real-time complex physics simulations available
+                               at \href{http://agottem.com/physics\_simulations}{http://agottem.com/physics\_simulations}
                          \item Participated in a co-op at Motorola from end of freshman
                                year through end of senior year
                         } \\
     \end{tabular}
 
-%    \tablegap
-%
+    \tablegap
+
 %    \begin{tabular}{
 %                    L{0.05\textwidth-\tabcolsep-\tabcolsep}
 %                    L{0.95\textwidth-\tabcolsep-\tabcolsep}
@@ -409,7 +472,7 @@
 %        \summary{
 %                 \item Computer Science Technology Award
 %                 \item Eagle Scout in the Boy Scouts of America
-%                 \item Volunteer at the Lincoln Park Zoo (2014 - Present)
+%                 \item Volunteer at the Lincoln Park Zoo (2014 - 2016)
 %                }
 %    \end{tabular}
 
@@ -450,6 +513,7 @@
         \begin{itemize}
             \item ClearCase
             \item Git
+            \item Emacs
             \item Apache
             \item Clang
             \item LLVM
@@ -460,6 +524,7 @@
             \item Microsoft Visual Studio
             \item WinDbg
             \item Wireshark
+            \item Bitcoin
         \end{itemize} &
         \vertcattext{Programming Experience} &
         \listtext
@@ -469,10 +534,12 @@
                 \item Solarflare OpenOnload
                 \item Linux development
                       \begin{itemize}
-                          \item Device drivers, Kernel modification, FUSE, GTK
+                          \item Device drivers, Kernel modification, FUSE, GTK, NUMA
                       \end{itemize}
                 \item Embedded development
-                \item Profiling and debugging
+                  \begin{itemize}
+                      \item I2C, RTOS
+                  \end{itemize}
                 \item Windows development
                       \begin{itemize}
                           \item WinAPI, MFC, COM, .NET
@@ -481,6 +548,7 @@
                       \begin{itemize}
                           \item OpenGL, DirectX
                       \end{itemize}
+                \item Profiling and debugging
                 \item Language design and grammar definition
                       \begin{itemize}
                           \item Flex, Bison
